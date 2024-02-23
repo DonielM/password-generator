@@ -88,7 +88,11 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+// quick plan
+//need varriable for password : length, special char, nummerical char, lower case char, upper case char
+
+// Function to prompt user for password options 
+// need to make sure theres an alert or promt for when user enters incorrect inputs 
 function getPasswordOptions() {
 
 }
