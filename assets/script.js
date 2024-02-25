@@ -114,7 +114,7 @@ function getPasswordOptions() {
   password.numericalChar = confirm("Click OK to include numerical characters.");
   password.lowCaseChar = confirm("Click OK to include lowercase characters.");
   password.uppCase = confirm("Click OK to include uppercase characters.");
-
+}
 // Function for getting a random element from an array
 function getRandom(arr) {
   let randomIndex = Math.floor(Math.random() * arr.length);
@@ -129,20 +129,20 @@ function generatePassword() {
   let guaranteedCharacters = [];
 
   if (password.specialChar) {
-    possibleCharacters += getRandom(specialChar);
-    guaranteedCharacters += getRandom(specialChar);
+    possibleCharacters = possibleCharacters.concat(specialChar);
+    guaranteedCharacters.push(getRandom(specialChar));
   }
   if (password.numericalChar) {
-    possibleCharacters += getRandom(numericalChar);
-    guaranteedCharacters += getRandom(numericalChar);
+    possibleCharacters = possibleCharacters.concat(numericalChar);
+    guaranteedCharacters.push(getRandom(numericalChar));
   }
   if (password.lowCaseChar) {
-    possibleCharacters += getRandom(lowCaseChar);
-    guaranteedCharacters += getRandom(lowCaseChar);
+    possibleCharacters = possibleCharacters.concat(lowCaseChar);
+    guaranteedCharacters.push(getRandom(lowCaseChar));
   }
-  if (password.uppCase) {
-    possibleCharacters += getRandom(uppCase);
-    guaranteedCharacters += getRandom(uppCase);
+  if (password.uppCaseChar) {
+    possibleCharacters = possibleCharacters.concat(uppCaseChar);
+    guaranteedCharacters.push(getRandom(uppCaseChar));
   }
 
   for (let i = 0; i < password.length; i++) {
@@ -162,10 +162,18 @@ let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  let password = generatePassword();
+  let pw = generatePassword();
   let passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+  passwordText.value = pw;
+
+   password = {
+    length: 0,
+    specialChar: "",
+    numericalChar: "",
+    lowCaseChar: "",
+    uppCaseChar: "",
+  };
 }
 
 // Add event listener to generate button
