@@ -94,8 +94,18 @@ var upperCasedCharacters = [
 // Function to prompt user for password options 
 // need to make sure theres an alert or promt for when user enters incorrect inputs 
 function getPasswordOptions() {
-
-}
+  while (!password.length) {
+    password.length = parseInt(prompt("Please enter the desired length of your password. It has to be between 8 and 128 characters."));
+    if (password.length < 8 || password.length > 128 || isNaN(password.length)) {
+      alert("Please enter a valid length. It has to be between 8 and 128 characters. ");
+      password.length = 0; 
+      // If an incorrect value was inputed an alert will show and resets the length to make the while loop run again
+    }
+  }
+  password.specialChar = confirm("Click OK to include special characters.");
+  password.numericalChar = confirm("Click OK to include numerical characters.");
+  password.lowCaseChar = confirm("Click OK to include lowercase characters.");
+  password.uppCase = confirm("Click OK to include uppercase characters.");
 
 // Function for getting a random element from an array
 function getRandom(arr) {
