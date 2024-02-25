@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-var specialCharacters = [
+const specialChar = [
   '@',
   '%',
   '+',
@@ -26,10 +26,10 @@ var specialCharacters = [
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const numericalChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+const lowCaseChar = [
   'a',
   'b',
   'c',
@@ -59,7 +59,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+const uppCaseChar = [
   'A',
   'B',
   'C',
@@ -89,7 +89,15 @@ var upperCasedCharacters = [
 ];
 
 // quick plan
-//need varriable for password : length, special char, nummerical char, lower case char, upper case char
+//need letriable for password : length, special char, nummerical char, lower case char, upper case char
+
+let password = {
+  length: 0,
+  specialChar: "",
+  numericalChar: "",
+  lowCaseChar: "",
+  uppCaseChar: "",
+};
 
 // Function to prompt user for password options 
 // need to make sure theres an alert or promt for when user enters incorrect inputs 
@@ -109,21 +117,22 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  let randomIndex = Math.floor(Math.random() * arr.length);
+  let randomElement = arr[randomIndex];
+  return randomElement;
 }
-
 // Function to generate password with user input
 function generatePassword() {
 
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+  let password = generatePassword();
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 }
