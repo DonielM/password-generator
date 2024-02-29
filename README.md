@@ -1,5 +1,5 @@
 # password-generator
-This is a random password generator with prompts to customise your generated password.I made use of the provided data set to create functions, variables while loops and if statements to randomly generate a password from the given characters.
+This is a random password generator with prompts to customise your generated password. I made use of the provided data set to create functions, variables, while loops and if statements to randomly generate a password from the given characters.
 
 ## Objective
 * Generate a password when the button is clicked
@@ -16,7 +16,19 @@ This is a random password generator with prompts to customise your generated pas
 
   ## App Gif
   Here is a gif of the delpoyed app 
+  ![Alt Text](./assets/images/Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter(1).gif)
+
+  ## Too many screenshots
+  ![Screenshot](./assets/images/screenshot1.PNG)
+  ![Screenshot](./assets/images/screenshot2.PNG)
+  ![Screenshot](./assets/images/screenshot3.PNG)
+  ![Screenshot](./assets/images/screenshot4.PNG)
+  ![Screenshot](./assets/images/screenshot5.PNG)
+  ![Screenshot](./assets/images/screenshot6.PNG)
+  ![Screenshot](./assets/images/screenshot7.PNG)
 
   ## Github Repo
+  https://github.com/DonielM/password-generator
   
   ## Deployed Application
+  https://donielm.github.io/password-generator/
